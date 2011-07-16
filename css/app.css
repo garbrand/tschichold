@@ -1,0 +1,34 @@
+.view {
+	position: absolute;
+	top: 0; right: auto; bottom: 0; left: auto;
+}
+
+#reader.view {
+	left: 0;
+	width: 100%;
+}
+
+#comments.view {
+	right: 0;
+	width: 0%;
+}
+
+#comments {
+	background: #eee;
+}
+
+/* Controls */
+.thumb {
+	position: absolute;
+	bottom: 11.11%;
+	height: 24px;
+	font: normal normal normal 10px/24px 'CartoGothicStdBook', "lucida Grande", Tahoma, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #999;
+}
+
+.thumb:hover { color: black;}
+
+.thumb.prev { left: 11.11%; }
+.thumb.next { right: 11.11%;}

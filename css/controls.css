@@ -1,0 +1,24 @@
+#next, #prev {
+	position: absolute;
+	cursor: pointer;
+	bottom: 11.11%; 
+	background: #fff; color: #999;
+	font: normal normal normal 12px/12px 'CartoGothicStdBook';
+	text-transform: uppercase;
+	text-shadow: 0 0 1px #fff;
+	padding: 5px 11px;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 5px;
+}
+
+#next:hover, #prev:hover {
+	color: #333;
+	-webkit-box-shadow: 0 0 3px #999;
+}
+
+#prev {
+	left: 11.11%;
+}
+#next {
+	right: 11.11%;
+}

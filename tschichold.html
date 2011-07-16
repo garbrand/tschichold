@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tschichold</title>
+	<meta charset="utf-8">
+	<script src="http://localhost/lib/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+		var Tschichold = function(selector) {
+			var top, right, bottom, left;
+			var width, height;
+			var W, H;
+			
+			top = 0;
+			
+			var context;
+			var canvas;
+			
+			var view = {
+				ratio: function() {
+					var ratio;
+ 					return ratio = (W > H) ? [3,2,W,H] : [2,3,W,H];
+				},
+				position: function() {
+					W = $(selector).width();
+					H = $(selector).height();
+
+					// var h = $('#container').offset().top;
+					var r = top/H;
+					var w = W*r;
+
+					right = W*r;
+					bottom = H*r;
+					left = w;
+					
+					width = W-right-left;
+					height = 21*width/34;
+
+					// var p = {top: top, right: right, bottom: bottom, left: left};
+
+				},
+				
+				canvas: function() {
+					var $canvas = $('<canvas id="canvas" width="'+W+'" height="'+H+'"></canvas>');
+					return $canvas;
+				},
+				
+				getContext: function() {
+					canvas = document.getElementById("canvas");
+					context = canvas.getContext("2d");
+				},
+				
+				line: function(x1,y1, x2,y2) {
+					context.moveTo(x1,y1);
+					context.lineTo(x2,y2);
+					context.strokeStyle = '#ccc';
+					context.stroke();
+				},
+				
+				draw: function() {
+					view.line(0,0,W,H);
+					view.line(W,0,0,H*0.5);
+				}
+			};
+			
+			var events = {
+				resize: function() {
+					$(window).resize(function() {
+						view.position();
+						canvas.width = W;
+						canvas.height = H;
+						context.clearRect(0,0,W,H);
+						view.draw();
+					});
+				}
+			};
+			
+			var controller = {
+				init: function() {
+					view.position();
+					$('body').append(view.canvas());
+					view.getContext();
+					view.draw();
+					events.resize();
+				}
+			};
+			
+			var api = {
+				init: controller.init
+			};
+			
+			return api;
+		};
+		
+		$(function() {
+			var p = Tschichold('body');
+			p.init();
+			
+		});
+	</script>
+	
+	<style type="text/css" media="screen" name="reset">
+		html * { margin: 0; padding: 0; outline: 0; }
+		html { width: 100%; height: 100%; overflow: hidden;}
+	</style>
+	
+	<style type="text/css" media="screen" name="typography">
+		body { 
+			font: normal normal normal 14px/20px 'Palatino Linotype', Georgia, Times, serif;
+			height: 100%;
+		}
+	</style>
+	
+	<style type="text/css" media="screen">
+		#container {
+			background: #fee;
+		}
+		
+		#canvas {
+			background: rgba(128,0,0,0.1);
+		}
+	</style>
+</head>
+
+<body>
+</body>
+</html>

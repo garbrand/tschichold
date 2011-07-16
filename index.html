@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Tschichold</title>
+	<script src="http://localhost/lib/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tschichold.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	
+	<link rel="stylesheet" href="css/-master.css" type="text/css" media="screen" title="CSS imports" charset="utf-8">
+	
+	<script type="text/javascript" charset="utf-8">
+		$(function() {
+			var layout = Tschichold('.text', '#reader');
+			layout.init();
+			
+			var app = App();
+		});
+	</script>
+	
+	<style type="text/css" media="screen">
+		.visible .page {
+			background: #fee;
+		}
+		.grid {
+			border: 1px solid #F8D1D1;
+			position: absolute;
+			z-index: 1;
+			background: none;
+			display: none;
+		}
+		
+		#ninths #gridA, #ninths #gridB { width: 33.33%; }
+		#ninths17 #gridA, #ninths17 #gridB { width: 35.29%;}
+		
+		#gridA {
+			top: 0; bottom: 0;
+			left: 11.11%;
+			border-width: 0 1px;
+		}
+		
+		#gridB {
+			top: 0; bottom: 0;
+			right: 11.11%;
+			border-width: 0 1px;
+		}
+		
+		#grid {
+			right: 0; left: 0;
+			top: 11.11%; bottom: 22.22%;
+			border-width: 1px 0;
+		}
+	</style>
+	
+	<style type="text/css" media="screen">
+		#navigation {
+			position: absolute;
+			top: auto; right: 0; bottom: 0; left: auto;
+			height: 24px;
+			font: normal normal normal 10px/24px 'CartoGothicStdBook', "lucida Grande", Tahoma, sans-serif;
+			background: #eee; color: #555;
+			width: 30%;
+			z-index: 10;
+			-webkit-box-shadow: 0 0 2px #ccc;
+		}
+		
+		#navigation * {
+			-webkit-transform: all;
+			-webkit-transition: all 200ms ease-in;
+		}
+		
+		#navigation h1 {
+			font: normal normal normal 12px/24px 'DejaVuSerifBook', 'Palatino';
+			letter-spacing: 1px;
+			margin: 0;
+			float: left;
+			padding: 0 12px;
+			background: #fff;
+		}
+		
+		#navigation ul {
+			overflow: visible;
+		}
+		
+		#navigation li {
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			float: left;
+			list-style: none;
+			white-space: nowrap;
+			padding: 0 6px;
+		}
+		
+		#navigation.open h1 {
+			background: black; color: white;
+		}
+	</style>
+</head>
+	
+<body id="ninths17">
+<div id="navigation">
+	<h1>Garbrand.com</h1>
+	<ul>
+		<li>Table of Contents</li>
+	</ul>
+</div>
+	
+<div class="view" id="reader">
+	<div class="grid" id="gridA"></div>
+	<div class="grid" id="gridB"></div>
+	<div class="grid" id="grid"></div>
+	
+	<div class="text">
+	<h1>&ldquo;Tschichold in 17ths&rdquo;</h1>
+	<h2>Applying classic canon of page construction to the Web</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+
+<div class="view" id="comments">
+	
+</div>
+	
+</body>
+</html>

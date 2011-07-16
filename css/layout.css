@@ -1,0 +1,17 @@
+html * { padding: 0; margin: 0; outline: 0; }
+html { height: 100%; width: 100%; overflow: hidden; }
+
+.page {
+	position: absolute;
+	top: 11.11%; right: auto; bottom: 22.22%; left: auto;
+	overflow: hidden;
+}
+
+#pageA, #pageB { overflow: hidden; }
+
+#ninths .page { 	width: 33.33%; } /* Oh, the beauty of the numbers! */
+#ninths17 .page { width: 35.29%; }
+
+
+#pageA { 			left: 11.11%; }
+#pageB { 			right: 11.11%;}

@@ -1,0 +1,50 @@
+body {
+	font-size: 100%;
+	font: normal normal normal 14px/24px 'DejaVuSerifBook', 'Palatino';
+	line-height: 24px;
+}
+
+h1 {
+	font: normal normal normal 32px/48px 'DejaVuSerifItalic', 'Palatino';
+	letter-spacing: -1px;
+	margin: 24px 0;
+}
+
+h2 {
+	font: normal normal normal 16px/24px 'CartoGothicStdBook', 'Palatino';
+	text-transform: uppercase;
+	margin-bottom: 24px;
+	text-align: left;
+}
+
+p {
+	margin-bottom: 24px;
+	text-align: justify;
+	text-shadow: 0 0 1px #fff;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		font-size: 100%;
+		font: normal normal normal 11px/20px 'DejaVuSerifBook', 'Palatino';
+	}
+
+	h1 {
+		font: normal normal normal 25px/40px 'DejaVuSerifItalic', 'Palatino';
+		letter-spacing: -1px;
+		margin: 20px 0;
+	}
+
+	h2 {
+		font: normal normal normal 13px/20px 'CartoGothicStdBook', 'Palatino';
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		text-align: left;
+	}
+
+	p {
+		margin-bottom: 20px;
+		text-align: justify;
+		text-shadow: 0 0 1px #fff;
+	}
+}
