@@ -13,6 +13,7 @@ var App = function() {
 	});
 	
 	$('body').keydown(function(event, data) {
+		// The `1` key toggles the grid
 		if (event.which == 49) {
 			$('.grid').toggle();
 			$('body').toggleClass('visible');
