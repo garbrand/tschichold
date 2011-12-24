@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QUnit Test Suite for Tschichold</title>
+	<!-- SETUP -->
+	<script src="http://dev.gm/lib/jquery.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!-- QUNIT SETUP -->
+	<link rel="stylesheet" href="http://dev.gm/lib/qunit2/qunit.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="http://dev.gm/lib/qunit2/qunit.extension.css" type="text/css" media="screen">
+	
+	<script type="text/javascript" src="http://dev.gm/lib/qunit2/qunit.js"></script>	
+	<script type="text/javascript" src="http://dev.gm/lib/qunit2/qunit.extension.js"></script>
+	<!-- script type="text/javascript" src="http://dev.gm/lib/qunit2/qunit.testLoader.js"></script-->
+	
+	<script src="../js/tschichold.js" type="text/javascript" charset="utf-8"></script>
+	<script src="tschichold.test.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	<style type="text/css" media="screen">
+		#hidden {
+			position: absolute;
+			width: 100%; height: 100%;
+			top: 0; right: 0; bottom: 0; left: 0;
+			overflow: hidden;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 id="qunit-header">QUnit Test Suite</h1>
+	<ul id="toolbar">
+		<li id="build_toggle">Stop background testing</li>
+	</ul>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+	<div id="qunit-fixture">test markup</div>
+</body>
+</html>

@@ -1,3 +1,11 @@
+// 
+//  tschichold.js
+//  tschichold
+//  
+//  Created by Garbrand van der Molen on 2011-12-24.
+//  Copyright 2011 Garbrand. All rights reserved.
+// 
+
 var Tschichold = function(selector, target, registry, test) {
 	// if(selector === undefined) return false;
 	registry = registry || $({});
@@ -59,6 +67,7 @@ var Tschichold = function(selector, target, registry, test) {
 			var next = view.template.thumb('next', 'Next &rsaquo;');
 			
 			$spread.append(view.template.page(), prev, next).appendTo(target);
+			
 			callback();
 		},
 		calculateHeight: function() {
@@ -66,8 +75,7 @@ var Tschichold = function(selector, target, registry, test) {
 			// Sets var height and var linesPerPage
 			var $page = $('.page:first');
 			model.height = $page.height();
-			// console.log('height:', model.height);	
-			var lineHeight = 24; // TODO: make this a robust function - parseFloat($page.css('line-height').slice(0,-2)); returns 'normal'
+			var lineHeight = parseFloat($('body').css('line-height').slice(0, -2));
 			var lines = Math.floor(model.height / lineHeight);
 		
 			model.linesPerPage = lines * lineHeight;
@@ -180,5 +188,5 @@ var Tschichold = function(selector, target, registry, test) {
 		}
 	};
 	
-	return (test) ? api.testing() : api.production();
+	return (typeof QUnit == 'undefined') ? api.production() :  api.testing();
 };
