@@ -8,7 +8,7 @@
 
 
 // # Tschichold
-// Classical canon of page construction for the digital age.
+// Theoretical page layout brought to the digital age.
 
 var Tschichold = function(selector, target, registry) {
 	// Defaults

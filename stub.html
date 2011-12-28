@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Tschichold</title>
+	<script src="http://dev.gm/lib/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tschichold.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	
+	<link rel="stylesheet" href="css/-master.css" type="text/css" media="screen" title="CSS imports" charset="utf-8">
+	
+	<script type="text/javascript" charset="utf-8">
+		$(function() {
+			var layout = Tschichold('.text', '#reader');
+			layout.init();
+			
+			var app = App();
+		});
+	</script>
+	
+	<style type="text/css" media="screen">
+		sup, sub {
+			display: none;
+		}
+		.visible .page {
+			background: #fee;
+		}
+		.grid {
+			border: 1px solid #F8D1D1;
+			position: absolute;
+			z-index: 1;
+			background: none;
+			display: none;
+		}
+		
+		#ninths #gridA, #ninths #gridB { width: 33.33%; }
+		#ninths17 #gridA, #ninths17 #gridB { width: 35.29%;}
+		
+		#gridA {
+			top: 0; bottom: 0;
+			left: 11.11%;
+			border-width: 0 1px;
+		}
+		
+		#gridB {
+			top: 0; bottom: 0;
+			right: 11.11%;
+			border-width: 0 1px;
+		}
+		
+		#grid {
+			right: 0; left: 0;
+			top: 11.11%; bottom: 22.22%;
+			border-width: 1px 0;
+		}
+	</style>
+	
+	<style type="text/css" media="screen">
+		#navigation {
+			position: absolute;
+			top: auto; right: 0; bottom: 0; left: auto;
+			height: 24px;
+			font: normal normal normal 10px/24px 'CartoGothicStdBook', "lucida Grande", Tahoma, sans-serif;
+			background: #eee; color: #555;
+			width: 30%;
+			z-index: 10;
+			-webkit-box-shadow: 0 0 2px #ccc;
+		}
+		
+		#navigation * {
+			-webkit-transform: all;
+			-webkit-transition: all 200ms ease-in;
+		}
+		
+		#navigation h1 {
+			font: normal normal normal 12px/24px 'DejaVuSerifBook', 'Palatino';
+			letter-spacing: 1px;
+			margin: 0;
+			float: left;
+			padding: 0 12px;
+			background: #fff;
+		}
+		
+		#navigation ul {
+			overflow: visible;
+		}
+		
+		#navigation li {
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			float: left;
+			list-style: none;
+			white-space: nowrap;
+			padding: 0 6px;
+		}
+		
+		#navigation.open h1 {
+			background: black; color: white;
+		}
+	</style>
+</head>
+	
+<body id="ninths17">
+<div id="navigation">
+	<h1>Garbrand.com</h1>
+	<ul>
+		<li>Table of Contents</li>
+	</ul>
+</div>
+	
+<div class="view" id="reader">
+	<div class="grid" id="gridA"></div>
+	<div class="grid" id="gridB"></div>
+	<div class="grid" id="grid"></div>
+	
+	<div class="text">
+
+
+	<h1>Canons of page construction</h1>
+
+	<h2>From Wikipedia, the free encyclopedia</h2>
+
+	<!-- bodycontent -->
+	<div lang="en" dir="ltr" class="mw-content-ltr">
+		<p>
+			The <b>canons of page construction</b> are a set of principles in the field of <a href="/wiki/Book_design" title="Book design">book design</a> used to describe the ways that page proportions, margins and type areas (<a href="/wiki/Print_space" title="Print space" class="mw-redirect">print spaces</a>) of books are constructed.
+		</p>
+		<p>
+			The notion of canons, or laws of form, of book page construction was popularized by <a href="/wiki/Jan_Tschichold" title="Jan Tschichold">Jan Tschichold</a> in the mid to late twentieth century, based on the work of J. A. van de Graaf, <a href="/wiki/Ra%C3%BAl_M._Rosarivo" title="Raúl M. Rosarivo" class="mw-redirect">Raúl M. Rosarivo</a>, Hans Kayser, and others.<sup id="cite_ref-tschichold_0-0" class="reference"><a href="#cite_note-tschichold-0">1</a></sup> Tschichold wrote “Though largely forgotten today, methods and rules upon which it is impossible to improve have been developed for centuries. To produce perfect books these rules have to be brought to life and applied.”<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">2</a></sup> Kayser's 1946 <i>Ein harmonikaler Teilungskanon</i><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">3</a></sup> had earlier used the term canon in this context.
+		</p>
+		<p>
+			Typographers and book designers apply these principles to this day, with variations related to the availability of standardized <a href="/wiki/Paper_sizes" title="Paper sizes" class="mw-redirect">paper sizes</a>, and the diverse types of <a href="/wiki/Printing_press" title="Printing press">commercially printed</a> books.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">4</a></sup>
+		</p>
+		<h2>Van de Graaf canon</h2>
+		<p>
+			The Van de Graaf canon is a historical reconstruction of a method that may have been used in <a href="/wiki/Book_design" title="Book design">book design</a> to divide a page in pleasing proportions.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">5</a></sup> This canon is also known as the "secret canon" used in many <a href="/wiki/Medieval" title="Medieval" class="mw-redirect">medieval</a> manuscripts and <a href="/wiki/Incunabula" title="Incunabula" class="mw-redirect">incunabula</a>.
+		</p>
+		<p>
+			The geometrical solution of the construction of Van de Graaf's canon, which works for any page width:height ratio, enables the book designer to position the text body in a specific area of the page. Using the canon, the proportions are maintained while creating pleasing and functional margins of size 1/9 and 2/9 of the page size.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">6</a></sup> The resulting inside margin is one-half of the outside margin, and of proportions 2:3:4:6 (inner:top:outer:bottom) when the page proportion is 2:3 (more generally 1:R:2:2R for page proportion 1:R<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">7</a></sup>). This method was discovered by Van de Graaf, and used by Tschichold and other contemporary designers; they speculate that it may be older.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">8</a></sup>
+		</p>
+		<p>
+			The page proportions vary, but most commonly used is the 2:3 proportion. Tschichold writes "For purposes of better comparison I have based his figure on a page proportion of 2:3, which Van de Graaf does not use."<sup id="cite_ref-Tsi45_8-0" class="reference"><a href="#cite_note-Tsi45-8">9</a></sup> In this canon the text area and page size are of same proportions, and the height of the text area equals the page width. This canon was popularized by <a href="/wiki/Jan_Tschichold" title="Jan Tschichold">Jan Tschichold</a> in his book <i>The Form of the Book</i>.<sup id="cite_ref-tschichold_0-1" class="reference"><a href="#cite_note-tschichold-0">1</a></sup>
+		</p>
+		<p>
+			Robert Bringhurst, in his <i>The Elements of Typographic Style</i>, asserts that the proportions that are useful for the shapes of pages are equally useful in shaping and positioning the textblock. This was often the case in medieval books, although later on in the Renaissance, typographers preferred to apply a more <a href="/wiki/Polyphonic" title="Polyphonic" class="mw-redirect">polyphonic</a> page in which the proportions of page and textblock would differ.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">10</a></sup>
+		</p>
+		<h2>
+			Golden Canon
+		</h2>
+		<p>
+			Tschichold's "golden canon of page construction"<sup id="cite_ref-tschichold_0-2" class="reference"><a href="#cite_note-tschichold-0">1</a></sup> is based on simple integer ratios, equivalent to Rosarivo's "typographical divine proportion."<sup id="cite_ref-rosarivo_10-0" class="reference"><a href="#cite_note-rosarivo-10">11</a></sup>
+		</p>
+		<h3>
+			Interpretation of Rosarivo
+		</h3>
+		<p>
+			<a href="/wiki/Ra%C3%BAl_Rosarivo" title="Raúl Rosarivo">Raúl Rosarivo</a> analyzed Renaissance books with the help of a <a href="/wiki/Compass_(drafting)" title="Compass (drafting)">drafting compass</a> and a ruler, and concluded in his <i>Divina proporción tipográfica</i> ("Typographical Divine Proportion", first published in 1947) that <a href="/wiki/Johannes_Gutenberg" title="Johannes Gutenberg">Gutenberg</a>, <a href="/wiki/Peter_Sch%C3%B6ffer" title="Peter Schöffer">Peter Schöffer</a>, <a href="/wiki/Nicolaus_Jenson" title="Nicolaus Jenson" class="mw-redirect">Nicolaus Jenson</a> and others had applied the golden canon of page construction in their works.<sup id="cite_ref-Carreras_11-0" class="reference"><a href="#cite_note-Carreras-11">12</a></sup> According to Rosarivo, his work and assertion that Gutenberg used the "golden number" 2:3, or "secret number" as he called it, to establish the harmonic relationships between the diverse parts of a work,<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">13</a></sup> was analyzed by experts at the Gutenberg Museum and re-published in the <a href="/wiki/Gutenberg-Jahrbuch" title="Gutenberg-Jahrbuch">Gutenberg-Jahrbuch</a>, its official magazine.<sup id="cite_ref-vicente_13-0" class="reference"><a href="#cite_note-vicente-13">14</a></sup> Ros Vicente points out that Rosarivo "demonstrates that Gutenberg had a module different from the well-known one of <a href="/wiki/Luca_Pacioli" title="Luca Pacioli">Luca Paccioli</a>" (the <a href="/wiki/Golden_ratio" title="Golden ratio">golden ratio</a>).<sup id="cite_ref-vicente_13-1" class="reference"><a href="#cite_note-vicente-13">14</a></sup>
+		</p>
+		<p>
+			Tschichold also interprets Rosarivo's golden number as 2:3, saying:
+		</p>
+		<blockquote class="toccolours">
+			<p>
+				In figure 5 the height of the type area equals the width of the page: using a page proportion of 2:3, a condition for this canon, we get one-ninth of the paper width for the inner margin, two-ninths for the outer or fore-edge margin, one-ninth of the paper height for the top, and two-ninths for the bottom margin. Type area and paper size are of equal proportions. ... What I uncovered as the canon of the manuscript writers, Raul Rosarivo proved to have been Gutenberg's canon as well. He finds the size and position of the type area by dividing the page diagonal into ninths.<sup id="cite_ref-Tsi45_8-2" class="reference"><a href="#cite_note-Tsi45-8">9</a></sup>
+			</p>
+		</blockquote>
+		<p>
+			The figures he refers to are reproduced in combination here.
+		</p>
+		<h3>
+			John Man's interpretation of Gutenberg
+		</h3>
+		<p>
+			Historian John Man suggests that <a href="/wiki/Johannes_Gutenberg" title="Johannes Gutenberg">Gutenberg</a>'s Bible page was based on the <a href="/wiki/Golden_ratio" title="Golden ratio">golden ratio</a> (commonly approximated as the decimal 0.618 or the ratio 5:8), and that the printed area also had that shape.<sup id="cite_ref-Man_14-0" class="reference"><a href="#cite_note-Man-14">15</a></sup> He quotes the dimensions of <a href="/wiki/Johannes_Gutenberg" title="Johannes Gutenberg">Gutenberg</a>'s half-folio Bible page as 30.7 x 44.5&nbsp;cm, a ratio of 1:1.45, close to Rosarivo's golden 2:3 (1.5) but not to the golden ratio 1.618.
+		</p>
+		<h3>
+			Tschichold and the golden section
+		</h3>
+		<p>
+			Building on Rosarivo's work, contemporary experts in book design such as Tschichold and <a href="/w/index.php?title=Richard_Hendel&amp;action=edit&amp;redlink=1" class="new" title="Richard Hendel (page does not exist)">Richard Hendel</a> assert as well that the page proportion of the <a href="/wiki/Golden_section" title="Golden section" class="mw-redirect">golden section</a> (21:34) has been used in <a href="/wiki/Book_design" title="Book design">book design</a>, in manuscripts, and <a href="/wiki/Incunabula" title="Incunabula" class="mw-redirect">incunabula</a>, mostly in those produced between 1550 and 1770. Hendel writes that since Gutenberg's time, books have been most often printed in an upright position, that conform loosely, if not precisely, to the golden ratio.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">16</a></sup>
+		</p>
+		<p>
+			These page proportions based on the golden section or golden ratio, are usually described through its <a href="/wiki/Convergent_(continued_fraction)" title="Convergent (continued fraction)">convergents</a> such as 2:3, 5:8, and 21:34.
+		</p>
+		<p>
+			Tschichold says that common ratios for page proportion used in book design include as 2:3, 1:√3, and the golden section. The image with circular arcs depicts the proportions in a medieval manuscript, that according to Tschichold feature a "Page proportion 2:3. Margin proportions 1:1:2:3. Text area in accord with the Golden Section. The lower outer corner of the text area is fixed by a diagonal as well."<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">17</a></sup> By accord with the golden section, he does not mean exactly equal to, which would conflict with the stated proportions.
+		</p>
+		<p>
+			Tschichold refers to a construction equivalent to van de Graaf's or Rosarivo's with a 2:3 page ratio as "the Golden Canon of book page construction as it was used during late Gothic times by the finest of scribes." For the canon with the arc construction, which yields a text area ratio closer to the golden ratio, he says "I abstracted from manuscripts that are older yet. While beautiful, it would hardly be useful today."<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">18</a></sup>
+		</p>
+		<p>
+			Of the different page proportions that such a canon can be applied to, he says "Book pages come in many proportions, i.e., relationships between width and height. Everybody knows, at least from hearsay, the proportion of the Golden Section, exactly 1:1.618. A ratio of 5:8 is no more than an approximation of the Golden Section. It would be difficult to maintain the same opinion about a ratio of 2:3."<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">19</a></sup>
+		</p>
+		<p>
+			Tschichold also expresses a preference for certain ratios over others: "The geometrically definable irrational page proportions like 1:1.618 (<a href="/wiki/Golden_ratio" title="Golden ratio">Golden Section</a>), 1:√2, 1:√3, 1:√5, 1:1.538, and the simple rational proportions of 1:2, 2:3, 5:8 and 5:9 I call clear, intentional and definite. All others are unclear and accidental ratios. The difference between a clear and an unclear ratio, though frequently slight, is noticeable. ... Many books show none of the clear proportions, but accidental ones."<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">20</a></sup>
+		</p>
+		<p>
+			John Man's quoted <a href="/wiki/Johannes_Gutenberg" title="Johannes Gutenberg">Gutenberg</a> page sizes are in a proportion not very close to the golden ratio,<sup id="cite_ref-Man_14-1" class="reference"><a href="#cite_note-Man-14">15</a></sup> but Rosarivo's or van de Graaf's construction is applied by Tschichold to make a pleasing text area on pages of arbitrary proportions, even such accidental ones.
+		</p>
+		<h2>
+			Current applications
+		</h2>
+		<p>
+			Richard Hendel, associate director of the <a href="/wiki/University_of_North_Carolina_Press" title="University of North Carolina Press">University of North Carolina Press</a>, describes book design as a craft with its own traditions and a relatively small body of accepted rules.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">21</a></sup> The dust cover of his book, <i>On Book Design</i>, features the Van de Graaf canon.
+		</p>
+		<p>
+			Christopher Burke, in his book on German typographer <a href="/wiki/Paul_Renner" title="Paul Renner">Paul Renner</a>, creator of the <i><a href="/wiki/Futura_(typeface)" title="Futura (typeface)">Futura</a></i> typeface, described his views about page proportions:
+		</p>
+		<blockquote class="toccolours">
+			<p>
+				Renner still championed the traditional proportions of margins, with the largest at the bottom of a page, 'because we hold the book by the lower margin when we take it in the hand and read it'. This indicates that he envisioned a small book, perhaps a novel, as his imagined model. Yet he struck a pragmatic note by adding that the traditional rule for margin proportions cannot be followed as a doctrine: for example, wide margins for pocket books would be counter-productive. Similarly, he refuted the notion that the type area must have the same proportions as the page: he preferred to trust visual judgment in assessing the placement of the type area on the page, instead of following a pre-determined doctrine.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">22</a></sup>
+			</p>
+		</blockquote>
+		<p>
+			Bringhurst describes a book page as a tangible proportion, which together with the textblock produce an <a href="/wiki/Antiphonal" title="Antiphonal" class="mw-redirect">antiphonal</a> geometry, which has the capability to bind the reader to the book, or conversely put the reader's nerve on edge or drive the reader away.<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">23</a></sup>
+		</p>
+		<h2>
+			See also
+		</h2>
+		<ul>
+			<li>
+				<a href="/wiki/Book" title="Book">Book</a>
+			</li>
+			<li>
+				<a href="/wiki/Grid_(page_layout)" title="Grid (page layout)">Grid</a>
+			</li>
+			<li>
+				<a href="/wiki/Page_layout" title="Page layout">Page layout</a>
+			</li>
+		</ul>
+		<h2>
+			Footnotes
+		</h2>
+		<div class="reflist references-column-count references-column-count-2">
+			<ol class="references">
+				<li id="cite_note-tschichold-0">^ <a href="#cite_ref-tschichold_0-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-tschichold_0-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-tschichold_0-2"><sup><i><b>c</b></i></sup></a> Tschichold, Jan, <i>The Form of the Book</i>. p.46, Hartley &amp; Marks (1991), <a href="/wiki/Special:BookSources/0881791164" class="internal mw-magiclink-isbn">ISBN 0-88179-116-4</a>.
+				</li>
+				<li id="cite_note-1">
+					<b><a href="#cite_ref-1">^</a></b> As cited in Hendel, Richard. <i>On Book Design</i>, p.7
+				</li>
+				<li id="cite_note-2">
+					<b><a href="#cite_ref-2">^</a></b> Hans Kayser, <i>Ein harmonikaler Teilungskanon: Analyse einer geometrischen Figur im Bauhüttenbuch Villard de Honnecourt</i> (A canon for harmonious page division: analysis of a geometric figure in Bauhaus book of <a href="/wiki/Villard_de_Honnecourt" title="Villard de Honnecourt">Villard de Honnecourt</a>). Zurich: Occident-Verlag, 1946. cited by web page loaded 2006-09-11 <a rel="nofollow" class="external text" href="http://www.villardman.net/bibliography/bibliog.1900-1949.html">Writings on Villard de Honnecourt, 1900-1949</a> "An article-length (p. 32) attempt to demonstrate the use of Pythagorian musical proportion as the basis for the geometry in three of Villard's figures: fol. 18r, two figures at the bottom; and fol. 19r, rightmost figure in the second row from the top. While the geometric design itself is unquestionably that generated from the Pythagorian monochord, Kayser does not convince the reader that Villard understood its musical basis. Kayser apparently worked from photographs of the original folios, and the significance of Kayser's claim may be summarized in his own admission (p.30) that Villard's geometry does not match that of the Pythagorean design when correctly drawn."
+				</li>
+				<li id="cite_note-3">
+					<b><a href="#cite_ref-3">^</a></b> 
+				</li>
+				<li id="cite_note-4">
+					<b><a href="#cite_ref-4">^</a></b> Van de Graaf, J. A. , <i>Nieuwe berekening voor de vormgeving.</i> (1946) (as cited by Tschichold and others; original not examined)
+				</li>
+				<li id="cite_note-5">
+					<b><a href="#cite_ref-5">^</a></b> Tschichold, Jan, <i>The Form of the Book</i>. pp.28,37,48,51,58,61,138,167,174, Hartley &amp; Marks (1991), <a href="/wiki/Special:BookSources/0881791164" class="internal mw-magiclink-isbn">ISBN 0-88179-116-4</a>.
+				</li>
+				<li id="cite_note-6">
+					<b><a href="#cite_ref-6">^</a></b> Max, Stanley M. (2010) "The 'Golden Canon' of book-page construction: proving the proportions geometrically," <i>Journal of Mathematics and the Arts</i>, 4:3, 137-141. <a rel="nofollow" class="external autonumber" href="http://dx.doi.org/10.1080/17513470903458205">[1]</a>
+				</li>
+				<li id="cite_note-7">
+					<b><a href="#cite_ref-7">^</a></b> Hurlburt, Allen, <i>Grid: A Modular System for the Design and Production of Newspapers, Magazines, and Books</i>, p.71, John Wiley and Sons (1982) <a href="/wiki/Special:BookSources/047128923X" class="internal mw-magiclink-isbn">ISBN 0-471-28923-X</a>
+				</li>
+				<li id="cite_note-Tsi45-8">^ <a href="#cite_ref-Tsi45_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Tsi45_8-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Tsi45_8-2"><sup><i><b>c</b></i></sup></a> Tschichold , <i>The Form of the Book</i> p.45
+				</li>
+				<li id="cite_note-9">
+					<b><a href="#cite_ref-9">^</a></b> Bringhurst, <i>The Elements of Typographic Style</i>, p.163
+				</li>
+				<li id="cite_note-rosarivo-10">
+					<b><a href="#cite_ref-rosarivo_10-0">^</a></b> Rosarivo, Raúl M., <i>Divina proporción tipográfica</i>, La Plata, Argentina (1953). Previous editions: 1948 and 1947. Brief discussion about his work, is available online in Spanish <a rel="nofollow" class="external autonumber" href="http://fabiancarreras.com.ar/rmr/ladivina.htm">[2]</a>
+				</li>
+				<li id="cite_note-Carreras-11">
+					<b><a href="#cite_ref-Carreras_11-0">^</a></b> Carreras, Fabián, 
+				</li>
+				<li id="cite_note-12">
+					<b><a href="#cite_ref-12">^</a></b> Rosarivo, Raúl M., <i>Divina proporción tipográfica</i>, La Plata, Argentina, "[...] el número de oro o número clave en que Gutenberg se basó para establecer las relaciones armónicas que guardan las diversas partes de una obra"
+				</li>
+				<li id="cite_note-vicente-13">^ <a href="#cite_ref-vicente_13-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-vicente_13-1"><sup><i><b>b</b></i></sup></a> Ros, Vicente, <i>Infodiversidad. Ral Mario Rosarivo o el amor al libro</i>, Sociedad de Investigaciones Bibilotecológicas, Argentina Vol. 7 (2004) <a rel="nofollow" class="external text" href="http://redalyc.uaemex.mx/redalyc/pdf/277/27700106.pdf">Available online (Spanish)</a> (PDF)
+				</li>
+				<li id="cite_note-Man-14">^ <a href="#cite_ref-Man_14-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Man_14-1"><sup><i><b>b</b></i></sup></a> Man, John, <i>Gutenberg: How One Man Remade the World with Word</i> (2002) pp.166–67, Wiley, <a href="/wiki/Special:BookSources/0471218235" class="internal mw-magiclink-isbn">ISBN 0-471-21823-5</a>. "The half-folio page (30.7 x 44.5 cm) was made up of two rectangles — the whole page and its text area — based on the so called 'golden section', which specifies a crucial relationship between short and long sides, and produces an irrational number, as pi is, but is a ratio of about 5:8 (footnote: The ratio is 0.618.... <i>ad inf</i> commonly rounded to 0.625)"
+				</li>
+				<li id="cite_note-15">
+					<b><a href="#cite_ref-15">^</a></b> Hendel, Richard, <i>On Book Design</i>, p.34, Yale University Press (1998), <a href="/wiki/Special:BookSources/0300075707" class="internal mw-magiclink-isbn">ISBN 0-300-07570-7</a>
+				</li>
+				<li id="cite_note-16">
+					<b><a href="#cite_ref-16">^</a></b> Tschichold , <i>The Form of the Book</i>, p.43 Fig 4. "Framework of ideal proportions in a medieval manuscript without multiple columns. Determined by Jan Tschichold 1953. Page proportion 2:3. margin proportions 1:1:2:3, Text area proportioned in the Golden Section. The lower outer corner of the text area is fixed by a diagonal as well." (in the Dutch version, "letterveld volgens de Gulden Snede" — text area in accord with the Golden Section)
+				</li>
+				<li id="cite_note-17">
+					<b><a href="#cite_ref-17">^</a></b> Tschichold , <i>The Form of the Book</i> p.44
+				</li>
+				<li id="cite_note-18">
+					<b><a href="#cite_ref-18">^</a></b> Tschichold , <i>The Form of the Book</i>, p.37
+				</li>
+				<li id="cite_note-19">
+					<b><a href="#cite_ref-19">^</a></b> Tschichold , <i>The Form of the Book</i> pp.37–38
+				</li>
+				<li id="cite_note-20">
+					<b><a href="#cite_ref-20">^</a></b> Hendel, Richard, <i>On Book Design</i> pp.1–5
+				</li>
+				<li id="cite_note-21">
+					<b><a href="#cite_ref-21">^</a></b> Christopher, Burke, <i>Paul Renner: The Art of Typography</i>, Princeton Architectural Press, 1999, <a href="/wiki/Special:BookSources/1568981589" class="internal mw-magiclink-isbn">ISBN 1-56898-158-9</a>
+				</li>
+				<li id="cite_note-22">
+					<b><a href="#cite_ref-22">^</a></b> Bringhurst, <i>The elements of typographic style</i> (1999), p.145
+				</li>
+			</ol>
+		</div>
+		<h2>
+			References
+		</h2>
+		<ul>
+			<li>Egger, Willi, <a rel="nofollow" class="external text" href="http://www.ntg.nl/maps/pdf/30_13.pdf"><i>Help! The Typesetting Area</i></a> (PDF) (shows the Van de Graaf canon and a variant that divides the page into twelfths)
+			</li>
+			<li>
+				<i>Infodiversidad. Ral Mario Rosarivo o el amor al libro</i>, Sociedad de Investigaciones Bibilotecológicas, Argentina Vol. 7 (2004)
+			</li>
+			<li>Rosarivo, Raúl M., <i>Divina proporción tipográfica</i>, La Plata, Argentina (1953). Previous editions: 1948 and 1947
+			</li>
+		</ul>
+		<h2>
+			Further reading
+		</h2>
+		<ul>
+			<li>
+				<a href="/wiki/Luca_Pacioli" title="Luca Pacioli">Luca Pacioli</a>, <i>De Divina Proportione</i> (1509) (the originator of the excitement over the golden ratio)
+			</li>
+			<li>Lehmann-Haupt, Hellmut, <i>Five Centuries of Book Design: A Survey of Styles in the Columbia Library</i>, Columbia University, (1931)
+			</li>
+		</ul>
+		<h2>
+			External links
+		</h2>
+		<ul>
+			<li>
+				 chapter from <i>The Form of the Book</i>
+			</li>
+		</ul>
+
+</div>
+
+
+
+<div class="view" id="comments">
+
+</div>
+
+</body>
+</html>

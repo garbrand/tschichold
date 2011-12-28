@@ -1,3 +1,5 @@
+/* TODO: take care of sup and sub, they now push out the line-height */
+
 body {
 	font-size: 100%;
 	font: normal normal normal 14px/24px 'DejaVuSerifBook', 'Palatino';
@@ -5,46 +7,59 @@ body {
 }
 
 h1 {
-	font: normal normal normal 32px/48px 'DejaVuSerifItalic', 'Palatino';
+	font: normal normal normal 32px/48px 'DejaVuSerifBook', 'Palatino';
 	letter-spacing: -1px;
-	margin: 24px 0;
+/*	margin: 24px 0;*/
 }
 
 h2 {
+	font: normal normal normal 22px/24px 'CartoGothicStdBook', 'Palatino';
+}
+
+h3 {
 	font: normal normal normal 16px/24px 'CartoGothicStdBook', 'Palatino';
 	text-transform: uppercase;
-	margin-bottom: 24px;
-	text-align: left;
 }
 
 p {
-	margin-bottom: 24px;
 	text-align: justify;
 	text-shadow: 0 0 1px #fff;
+}
+
+ul {
+	padding-left: 2em;
+}
+
+ol {
+	padding-left: 2.5em;
+}
+
+h1, h2, p, ul, ol {
+	margin-bottom: 24px;
 }
 
 @media screen and (max-width: 800px) {
 	body {
 		font-size: 100%;
-		font: normal normal normal 11px/20px 'DejaVuSerifBook', 'Palatino';
+		font: normal normal normal 11px/18px 'DejaVuSerifBook', 'Palatino';
 	}
 
 	h1 {
-		font: normal normal normal 25px/40px 'DejaVuSerifItalic', 'Palatino';
+		font: normal normal normal 25px/36px 'DejaVuSerifBook', 'Palatino';
 		letter-spacing: -1px;
-		margin: 20px 0;
+/*		margin: 20px 0;*/
 	}
 
 	h2 {
-		font: normal normal normal 13px/20px 'CartoGothicStdBook', 'Palatino';
+		font: normal normal normal 13px/18px 'CartoGothicStdBook', 'Palatino';
 		text-transform: uppercase;
-		margin-bottom: 20px;
+		margin-bottom: 18px;
 		text-align: left;
 	}
 
 	p {
-		margin-bottom: 20px;
-		text-align: justify;
+		margin-bottom: 18px;
+/*		text-align: justify;*/
 		text-shadow: 0 0 1px #fff;
 	}
 }
