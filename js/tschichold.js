@@ -98,12 +98,12 @@ var Tschichold = function(selector, target, registry) {
 		calculateHeight: function() {
 			// Calculate what the height should be in integer line-heights
 			// Sets var `height` and var `linesPerPage`
-			model.height = $pageA.height();
+			model.height = $pageA.height(); // height of a single page in the viewport
 			model.lineHeight = parseFloat($body.css('line-height').slice(0, -2));
-			var lines = Math.floor(model.height / model.lineHeight);
+			model.linesPerSpread = Math.floor(model.height / model.lineHeight); // number of lines visible in the viewport
 		
 			// TODO: change linesPerPage to pageHeight, add a new variable to hold actual linesPerPage
-			return model.linesPerPage = lines * model.lineHeight;
+			return model.linesPerPage = model.linesPerSpread * model.lineHeight;
 		},
 		
 		resetPageHeight: function() {
@@ -143,7 +143,6 @@ var Tschichold = function(selector, target, registry) {
 			// TODO: recheck this on resize
 			// TODO: seems we're setting the line-height in hard pixels
 			var lines = Math.ceil($buffer.height()/model.lineHeight);
-			console.log(lines, model.linesPerPage/model.lineHeight);
 		}
 	};
 	
@@ -152,7 +151,7 @@ var Tschichold = function(selector, target, registry) {
 	// # Events
 	var events = {
 		resize: function() {
-			// Recalculate the height to fit integer line-heights, the reflow the text
+			// Recalculate the height to fit integer line-heights, then reflow the text
 			// Throttle this function, as it can send an overwhelming amount of events
 			var scroll = false
 			, interval;
@@ -173,6 +172,22 @@ var Tschichold = function(selector, target, registry) {
 			
 			// Return the interval id so we can use this to call `clearTimeout(interval)`
 			return interval;
+		},
+		scroll: function() {
+			var scroll = false,
+			interval;
+			
+			$(window).scroll(function(event) {
+				scroll = true;
+			});
+			
+			interval = setInterval(function() {
+				if(scroll) {
+					scroll = false;
+					
+					console.log('We`re scrolling!');
+				}
+			});
 		},
 		next: function() {
 			$next.click(function() {
@@ -212,6 +227,7 @@ var Tschichold = function(selector, target, registry) {
 			
 			// Events
 			events.resize();
+			events.scroll();
 			events.next();
 			events.prev();
 		}
@@ -223,7 +239,8 @@ var Tschichold = function(selector, target, registry) {
 	var api = {
 		production: function() {
 			return {
-				init: controller.init
+				init: controller.init,
+				model: model
 			};
 		},
 		
