@@ -29,14 +29,14 @@ var Tschichold = function(selector, target, registry) {
 	
 	// # Model
 	var model = {
-		height: null,			// Integer height
-		text: null,				// Cached copy of the text
-		linesPerPage: null,	// Integer linesPerPage of the text
-		pageHeight: null,
-		linesInText: null,	// Number of lines the text would take at the current page size
-		page: null,				// Current page
-		textheight: null,		// Total height of all the text
-		lineHeight: null
+		height: 		null,	// Integer height
+		text: 			null,	// Cached copy of the text
+		linesPerPage: 	null,	// Integer linesPerPage of the text
+		pageHeight: 	null,
+		linesInText: 	null,	// Number of lines the text would take at the current page size
+		page: 			null,	// Current page
+		textheight: 	null,	// Total height of all the text
+		lineHeight: 	null
 	};
 	
 	
