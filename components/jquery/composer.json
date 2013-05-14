@@ -3,7 +3,7 @@
     "description": "jQuery JavaScript Library",
     "type": "component",
     "homepage": "http://jquery.com",
-    "license": "MIT",
+    "license": "GIT",
     "support": {
         "irc": "irc://irc.freenode.org/jquery",
         "issues": "http://bugs.jquery.com",
