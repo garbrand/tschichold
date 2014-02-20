@@ -1,0 +1,22 @@
+{
+  "name": "tschichold",
+  "version": "0.0.0",
+  "description": "Layout canon.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garbrand/tschichold.git"
+  },
+  "keywords": [
+    "layout"
+  ],
+  "author": "gvdm",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/garbrand/tschichold/issues"
+  },
+  "homepage": "https://github.com/garbrand/tschichold"
+}
